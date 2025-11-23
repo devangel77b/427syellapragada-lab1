@@ -1,0 +1,20 @@
+1. This is a review of the manuscript "Effect of initial vertical position on velocity at which an object strikes the ground" by Dakwale, Hein, Wallace, and Yellapragada. The MS examines the relationship between y_0 and v_f when it hits the ground when falling under the influence of gravity.
+
+2. Introdution: Several equations are given developed from Tipler? but they do not cite what equation in Tipler they are or how they were manipulated to get equations 2 and 3. Equation 3 is to be tested, but no alternatives are provided to be ruled out.
+
+3. Methods and materials: The authors worked with ping pong and criket balls. Drops were filmed with a phone (non metric units given!) and analyzed with Tracker Online (no citation given). It is unclear if the authors simply got the velocity from finite difference or if they asked Tracker to fit an assumed line, which would seem to force the data to support their preferred hypothesis.
+
+More information on the timing is needed to be replicable. How many timers. What were they instructed to start / stop timing on. Source of stopwatches? 
+
+4. Results: Table 1 gives timing data but could be more compact, giving just average (do you mean MEAN?) and s.d. and n?
+
+Table 2 it is not clear when/how they measured experimental velocuty - was it just the last frame?
+
+The authors appear to want to test the relationship v=\sqrt(2gh) but with only 3 points it would be very difficult to show this. The graph in Fig 1 does not start at h=0; lines between the data points appear to be artificat of plotting with a spreadsheet rather than actual data, and the expected \sqrt(2gh) is not shown.
+
+5. Discussion: The discussion does a nice job returning to the authors hypotheses and citing evidence by identifying what table or figure along with the statements the authors are making.
+
+References - probably need to cite Galileo or a more primary source about what he said. Probably need to cite what you used to do video analysis and what you used to do statistics with.
+
+Hall is listed as a reference but never cited and Hall is not a peer reviewed article please explain?
+
