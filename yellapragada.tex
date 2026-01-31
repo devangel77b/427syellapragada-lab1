@@ -1,0 +1,142 @@
+\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{siunitx}
+%\usepackage{tikz,pgfplots}
+\sisetup{separate-uncertainty=true}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{cleveref}
+\crefname{equation}{}{}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{table}{Table}{Tables}
+\usepackage{svg}
+
+% set PDF metadata
+\hypersetup{%
+pdftitle={The effect of initial vertical position on velocity at which an object strikes the ground},
+pdfauthor={Saanvi Dakwale, Samantha Hein, Reece Wallace, and Sashank Yellapragada},
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{J S\&E \textbf{2}, 35--38 (2026)}
+\fancyhead[LO]{Dakwale \emph{et al}}
+\fancyhead[LE]{Effect of initial vertical position on velocity}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{mytitlepage}{
+\fancyhf{}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 35--38 (2026)}
+\fancyfoot[C]{\thepage}
+}
+
+
+\begin{document}
+\setcounter{page}{35}
+
+\title{The effect of initial vertical position on velocity at which an object strikes the ground}
+\author{Saanvi Dakwale}
+\author{Samantha Hein}
+\author{Reece Wallace}
+\author{Sashank Yellapragada}
+\email{Contact author: 427syellapragada@frhsd.com}
+\affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
+\date{\today}
+
+\begin{abstract}
+This experiment investigates the relationship between an object’s initial vertical position and the velocity at which it strikes the ground when falling under the influence of gravity. The concept of constant acceleration in free fall dates back to Galileo, who established that objects accelerate uniformly under gravity, independent of mass (Galilei). For simplicity, drag was ignored, putting the object in free-fall. This assumption is reasonable for the cricket ball, for which drag is small compared to its weight, but is less valid for the ping-pong ball, where drag is comparable to the gravitational force. Ping-pong and cricket balls were dropped from varying heights in order to test the validity of the  equation $v_f=\sqrt{2gh}$. The duration of each fall was recorded to aid in calculating experimental velocities. Results supported the theoretical relationship proposed by the equation, indicating that as height increased, final velocity increased in proportion to the square root of the height, consistent with the form of $v_f=\sqrt{2gh}$.
+\end{abstract}
+
+\keywords{keywords here}
+
+\maketitle\thispagestyle{mytitlepage}
+
+\section{Introduction}
+The kinematics equation 
+\begin{equation}
+v_f^2 = v_i^2 + 2 a (x-x_0)
+\label{eq:1}
+\end{equation}
+relates an object’s initial velocity $v_i$, final velocity $v_f$, acceleration $a$, and displacement $(x-x_0)$ and is given from the equations of motion for constant acceleration \cite{tipler}. In free-fall, $a=g=\qty{9.8}{\meter\per\second\squared}$, the displacement is $h$, or the drop height, and $v_i=0$ due to the object starting from rest. It follows that \cref{eq:1} can be rewritten as: 
+\begin{equation}
+v_f^2 = 0 + 2 g h.
+\end{equation}
+
+Simplifying further, we find:
+\begin{equation}
+v_f = \sqrt{2gh}.
+\label{eq:3}
+\end{equation}
+\Cref{eq:3} predicts that an object’s final velocity depends only on drop height and gravitational acceleration. This experiment aims to investigate the validity of this equation. Based on \cref{eq:3}, we hypothesize that if an object is dropped from a greater initial vertical position, the object will strike the ground at a greater final velocity. 
+
+
+
+
+
+\section{Methods and materials}
+This experiment was conducted using commercially available ping-pong balls and cricket balls. To reduce mass-related variability, five balls of each type were measured using a CS200P scale (Ohaus Corporation; Parsippany, NJ) and were found to have consistent masses of \qty{2.0}{\gram} for the ping-pong balls and \qty{134.6}{\gram} for the cricket balls. Ping-pong balls had a diameter of \qty{40.0}{\milli\meter} and cricket balls had a diameter of \qty{72}{\milli\meter}. During the experiment, there was a gentle breeze, with an estimated wind speed of \qtyrange{8}{12}{mph}, according to AccuWeather weather reports that day. To minimize the impact of wind, only the final part of the vertical motion of the ball was analyzed. 
+
+To set up the experiment, a measuring tape was hung vertically outside a window, and a meter stick was set up to designate heights of \qty{1}{\meter}, \qty{2}{\meter}, and \qty{5}{\meter}. For the test at \qty{5}{\meter}, the meter stick was used to assist with video analysis calibration. A tripod with an iPhone 16 (Apple Inc; Cupertino, CA) was set up approximately \qty{4.6}{\meter} from the drop site and recorded video at \qty{240}{fps} with 1080p resolution and a standard wide-angle lens. 
+
+Video analysis was conducted using Tracker Online (Brown), an open-source video kinematics tool. The calibration in Tracker Online was completed by using the meter stick aligned parallel to the vertical drop. To minimize the rotation and initial push, each dropper released from rest by opening the fingers and attempting to minimize downward force and spin. For timing, stopwatches, supplied by our instructor, were used and began the moment the ball was dropped and stopped the moment it hit the ground. There were at least three people timing each trial. Trials that indicated significant discrepancies due to dropper variability were discarded, repeated, and new data was collected. Outliers were identified as trials where the times deviated by two or more standard deviations from the mean for a respective ball and height and were removed before averaging the data. The final velocity was calculated using the change in vertical position over the final five frames before impact (which helped mitigate the effects of wind) divided by the corresponding time interval, and the equation:
+\begin{equation}
+v_f = g t_{fall}
+\end{equation}
+
+For statistical analysis, a two-sample $t$-test was performed to find the $t$-value between the ping-pong and the cricket balls at each height, with all values being calculated using Google Sheets (Google LLC), and hypotheses below. Using significance level $\alpha=0.05$, a critical value of 2.31 was found to compare calculated $t$-values. While performing the test, degrees of freedom were also calculated using . 
+
+
+%, signifying no difference in the mean fall times of ping-pong balls and cricket balls dropped from the same height.
+%, signifying that the mean fall times differ between the two balls.
+
+
+
+
+
+
+\section{Results}
+Fill in later
+
+
+
+
+
+\section{Discussion}
+\subsection{Does final velocity increase if initial height increases?}
+The results strongly support the hypothesis that an object’s final velocity increases as its initial drop height increases, highly supporting the proposed relationship by \cref{eq:3}. As shown in Table 1, greater drop heights correspond to longer fall times. Table 2 also shows that both ping-pong and cricket balls exhibit increasing final velocity with height, consistent with the theoretical model \cref{eq:3}.
+
+For both balls, the experimental velocities closely matched the theoretical values, as depicted in Figure 1 and Figure 2. Although some points do not follow this trend, most of the points have an error bar that overlaps with the theoretical point, therefore supporting the fact that the deviations are more likely due to air resistance, timing inconsistencies, and environmental factors, which is discussed further in (IV-B). Table 3 provides results of a two-sample t-test comparing the ping-pong and cricket ball fall times at each height, a test that finds if the mean of two independent groups are statistically significant. At 1m and 2m, the table indicates that the differences are not statistically significant (-1.10 and 1.83 < 2.31), suggesting that the observed variations at these heights are consistent with the typical randomness of the experience. At 5m, however, the t-value does exceed the critical value (2.73 > 2.31), indicating a statistically significant difference that is too large to occur by chance and is likely caused by experimental error (IV-B).
+
+Because of experimental error, we estimate uncertainty of about 5-15\%. At a drop height of 5m, the ping-pong ball had a standard deviation of 0.145s with a mean fall time of 1.026s, corresponding to an uncertainty of approximately 14\%, calculated by dividing mean by standard deviation and multiplying by 100. In contrast, the cricket ball had a standard deviation of 0.0568s with a mean fall time of 0.836s, corresponding to an uncertainty of approximately 7\%. These values justify the estimated uncertainty range of 5-15\% in final velocity measurements.
+
+\subsection{Sources of experimental error}
+There were several possible sources of error that contributed to differences between the theoretical and experimental results. The most prominent source was likely air resistance, which slowed the objects slightly and prevented them from truly being in free-fall motion. Another likely source of error is human variation. Systematic errors, such as chances of improper calibration, or random errors, like human errors leading to timing inaccuracies, variation in drop height, and changes in release technique all are possible sources of error. In an attempt to minimize this effect, we recorded at 240fps, which improved precision slightly by providing a greater number or frames and providing frames at a slower rate, however inconsistencies may have still been introduced.
+
+
+
+
+
+\section{Acknowledgements} 
+We thank several anonymous reviewers for providing helpful comments. SD and SH primarily led on data collection as well as the writing of the introduction and methods. RW wrote the abstract and helped collect data. SY created the tables and graphs for the results, wrote the discussion, and found scientific sources. SD completed all statistical tests and interpretations. All members contributed to proofreading and editing, as well as feedback on the paper overall. 
+
+
+
+
+
+\bibliography{lab.bib}
+%References 
+
+%Galilei, Galileo. Two New Sciences. Translated by Stillman Drake, University of Wisconsin Press, 1974.
+
+%Tipler, Paul A., and Gene Mosca. Physics for Scientists and Engineers. 5th ed., W. H. Freeman, 2003.
+
+%Brown, Douglas, Robert M. Hanson, and Wolfgang Christian. "Tracker Online." Open Source Physics, AAPT, https://opensourcephysics.github.io/tracker-online/
+
+%Kim, Hae-Young. “Statistical notes for clinical researchers: the independent samples t-test.” Restorative dentistry & endodontics vol. 44,3 e26. 17 Jul. 2019, doi:10.5395/rde.2019.44.e26 
+
+%Google LLC. “Google Sheets.” Google Sheets, https://www.google.com/sheets/about/.
+
+
+\end{document}
