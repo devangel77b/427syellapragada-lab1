@@ -18,8 +18,12 @@ fig <- ggplot(data)+
     geom_function(fun=v_predicted,args=list(g=10.18),color='cyan')+
     theme_classic(base_size=8)+
     xlab('$h$ (\\unit{\\meter})')+
-    ylab('$v$ (\\unit{\\meter\\per\\second})')
-# format legend position later
+    ylab('$v$ (\\unit{\\meter\\per\\second})')+
+    theme(legend.position="inside",
+	legend.position.inside=c(0.05,0.95),
+	legend.justification.inside=c("left","top"),
+	legend.title=element_blank())
+	
 # save the figure
 ggsave("fig1.svg",plot=fig,width=3.4167,height=2,units="in")
 
