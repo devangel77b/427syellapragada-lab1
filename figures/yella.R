@@ -12,13 +12,13 @@ v_predicted <- function(height_m,g){
 
 # make plots
 fig <- ggplot(data)+
-    geom_hline(yintercept=0,color='gray50')+
+    geom_hline(yintercept=0,color='gray70')+
     geom_point(aes(x=height_m,y=v_ms,color=type))+
-    geom_function(fun=v_predicted,args=list(g=6.91),color='pink')+
-    geom_function(fun=v_predicted,args=list(g=10.18),color='cyan')+
+    geom_function(fun=v_predicted,args=list(g=6.91),color='#f8766d')+
+    geom_function(fun=v_predicted,args=list(g=10.18),color='#00bfc4')+
     theme_bw(base_size=8)+
-    xlab('$h$ (\\unit{\\meter})')+
-    ylab('$v$ (\\unit{\\meter\\per\\second})')+
+    xlab('$h$, \\unit{\\meter}')+
+    ylab('$v$, \\unit{\\meter\\per\\second}')+
     theme(legend.position="inside",
 	legend.position.inside=c(0.05,0.95),
 	legend.justification.inside=c("left","top"),
